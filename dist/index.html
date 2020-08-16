@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 06 | Patron Adapter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="w-75 mx-auto pt-3">
+      <h1>Solictar Prestamo</h1>
+      <h2 class="text-center" id="text-result" style="display: none;">Prestamo Aceptado</h2>
+      <hr>    
+      <p>Consideraciones:</p>
+      <ul>
+        <li>Rellenar los campos y esperar la respuesta a su solicitud</li>
+        <li>Para acceder al prestamo debe contar con un sueldo mayor a $1500</li>
+        <li>Se recomienda tener historial crediticio</li>
+        <li>Se recomienda tener experiencia laboral</li>
+      </ul>
+      <h4>Información del usuario</h4>
+
+      <form action="" id="form-usuario" method="POST">
+
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="dni">Dni</label>
+                <input type="text"class="form-control" id="dni" name="dni" required>
+              </div>
+
+          </div>
+          
+          <div class="form-row">
+              <!-- <div class="form-group col-md-4">
+                <label for="tipo">Tipo</label>
+                <input type="text" class="form-control" id="tipo" name="tipo" required>
+              </div> -->
+              <div class="form-group col-md-4">
+                <label for="sueldo">Sueldo</label>
+                <input type="number" class="form-control" id="sueldo" name="sueldo" required>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="prestamo">Historial Crediticio</label>
+                <select name="prestamo" id="prestamo" class="form-control" required>
+                  <option value="" >-- Seleccione --</option>
+                  <option value="si">Con Hsitorial</option>
+                  <option value="no">Sin Historial</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="trabajo">Experiencia de Trabajo</label>
+                <select name="trabajo" id="trabajo" class="form-control" required>
+                  <option value="" >-- Seleccione --</option>
+                  <option value="si">Con Experiencia</option>
+                  <option value="no">Sin Experiencia</option>
+                </select>
+              </div>
+          </div>
+
+          <hr>
+          <div class="form-group text-right">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+
+      </form>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="module" src="index.js" ></script>
+
+</body>
+</html>
